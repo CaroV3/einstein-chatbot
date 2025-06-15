@@ -16,7 +16,7 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
    git clone https://github.com/<jouwgebruikersnaam>/einstein-chatbot.git
    cd einstein-chatbot
    ```
-2. **installeer dependencies**
+2. **Installeer dependencies**
    ```bash
    npm install
    ```
@@ -27,7 +27,7 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
    AZURE_EMBEDDING_DEPLOYMENT_NAME=je_embedding_deployment
    AZURE_OPENAI_ENDPOINT=je_endpoint_url
    ```
-5. **start de server.**
+5. **Start de server.**
    Voer in in de terminal:
    ```bash
    node server.js
