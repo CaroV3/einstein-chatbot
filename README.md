@@ -15,9 +15,11 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
    git clone https://github.com/<jouwgebruikersnaam>/einstein-chatbot.git
    cd einstein-chatbot
    ```
-2. **Installeer dependencies**
+2. **Installeer dependencies in de server map**
    ```bash
+   cd server
    npm install
+
    ```
 3. **Maak .env bestand aan.**
    
@@ -27,6 +29,10 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
    ```bash
    node server.js
    ```
-6. **Open het project lokaal in de browser via index.html om te kunnen chatten**
+6. **Open de frontend**
+
+   Open client/index.html in je browser (bijv. via PhpStorm: rechterklik → "Open in Browser")
+
+   Typ een vraag om met Einstein te chatten!
 
   
