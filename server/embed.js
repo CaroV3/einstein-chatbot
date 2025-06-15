@@ -18,7 +18,7 @@ const embeddings = new AzureOpenAIEmbeddings({
 
 
 async function createVectorStore() {
-    const loader = new PDFLoader('./The_Design_of_Everyday_Things_by_Don_Norman.pdf');
+    const loader = new PDFLoader('./server/documents/The_Design_of_Everyday_Things_by_Don_Norman.pdf');
     const docs = await loader.load();
 
     const splitter = new RecursiveCharacterTextSplitter({

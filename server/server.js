@@ -5,7 +5,8 @@ import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import {extractDateFromText } from "./dateParser.js";
 import { FaissStore } from "@langchain/community/vectorstores/faiss";
 import * as dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: '../.env' });
+
 
 let vectorStore;
 
