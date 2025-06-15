@@ -19,17 +19,14 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
    ```bash
    npm install
    ```
-3. **Maak een .env bestand aan.**
-   Voeg in de hoofdmap een .env bestand toe met de volgende inhoud:
-   ```bash
-   AZURE_OPENAI_API_KEY=je_api_key
-   AZURE_EMBEDDING_DEPLOYMENT_NAME=je_embedding_deployment
-   AZURE_OPENAI_ENDPOINT=je_endpoint_url
-   ```
+3. **Maak .env bestand aan.**
+   
+   Kopieer de gegevens .env.example en plak deze in je zelfgemaakte .env bestand. Je hoeft deze alleen aan te      vullen met de geheime API key
 5. **Start de server.**
    Voer in in de terminal:
    ```bash
    node server.js
    ```
+6. **Open het project lokaal in de browser via index.html om te kunnen chatten**
 
   
