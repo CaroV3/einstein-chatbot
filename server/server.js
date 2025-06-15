@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import { AzureChatOpenAI, AzureOpenAIEmbeddings } from "@langchain/openai";
-import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import {extractDateFromText } from "./dateParser.js";
 import { FaissStore } from "@langchain/community/vectorstores/faiss";
 import * as dotenv from "dotenv";
@@ -18,7 +17,7 @@ const embeddings = new AzureOpenAIEmbeddings({
 // Laad vectordata bij opstarten
 async function loadVectorStore() {
     vectorStore = await FaissStore.load("vectordatabase", embeddings);
-    console.log("📦 Vectordata geladen");
+    console.log("Vectordata geladen");
 }
 
 await loadVectorStore();
@@ -35,14 +34,11 @@ app.post("/ask", async (req, res) => {
     const history = req.body.history || [];
 
     let documentContext = "";
+
     if (vectorStore) {
         const relevantDocs = await vectorStore.similaritySearch(prompt, 3);
         documentContext = relevantDocs.map(doc => doc.pageContent).join("\n\n");
-        if (vectorStore) {
-            const relevantDocs = await vectorStore.similaritySearch(prompt, 3);
-            documentContext = relevantDocs.map(doc => doc.pageContent).join("\n\n");
-            console.log("📄 Document context gebruikt voor prompt:\n", documentContext);  // <--- hier loggen
-        }
+        console.log("Document context gebruikt voor prompt:\n", documentContext);
     }
 
     // const parsedDate = extractDateFromText(prompt);
@@ -106,7 +102,7 @@ app.post("/ask", async (req, res) => {
         const aiResponse = result.content;
         res.json({ message: aiResponse });
     } catch (error) {
-        console.error("❌ Fout tijdens promptverwerking:");
+        console.error("Fout tijdens promptverwerking:");
         console.error(error); // Log de volledige error, inclusief stacktrace
         res.status(500).json({ error: "Er is iets misgegaan met de AI-verwerking." });
     }

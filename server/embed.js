@@ -12,7 +12,7 @@ console.log("API VERSION:", process.env.OPENAI_API_VERSION);
 const embeddings = new AzureOpenAIEmbeddings({
     azureOpenAIApiKey: process.env.AZURE_OPENAI_API_KEY,
     azureOpenAIApiEmbeddingsDeploymentName: process.env.AZURE_EMBEDDING_DEPLOYMENT_NAME,
-    azureOpenAIApiInstanceName: process.env.AZURE_OPENAI_API_INSTANCE_NAME, // als je die gebruikt
+    azureOpenAIApiInstanceName: process.env.AZURE_OPENAI_API_INSTANCE_NAME,
     azureOpenAIApiVersion: process.env.OPENAI_API_VERSION,
 });
 
