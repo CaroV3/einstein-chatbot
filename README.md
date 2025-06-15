@@ -27,6 +27,7 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
 5. **Start de server.**
    Voer in in de terminal:
    ```bash
+   cd server
    node server.js
    ```
 6. **Open de frontend**
