@@ -15,15 +15,22 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
    ```bash
    git clone https://github.com/<jouwgebruikersnaam>/einstein-chatbot.git
    cd einstein-chatbot
-2.**installeer dependencies**
-```bash
-  npm install
-3. **Maak een .env bestand aan**
-  Voeg in de hoofdmap een .env bestand toe met de volgende inhoud:
-```bash
-  AZURE_OPENAI_API_KEY=je_api_key
-  AZURE_EMBEDDING_DEPLOYMENT_NAME=je_embedding_deployment
-4. **start de server**
-```bash
-  node server.js
+   ```
+2. **installeer dependencies**
+   ```bash
+   npm install
+   ```
+3. **Maak een .env bestand aan.**
+   Voeg in de hoofdmap een .env bestand toe met de volgende inhoud:
+   ```bash
+   AZURE_OPENAI_API_KEY=je_api_key
+   AZURE_EMBEDDING_DEPLOYMENT_NAME=je_embedding_deployment
+   AZURE_OPENAI_ENDPOINT=je_endpoint_url
+   ```
+5. **start de server.**
+   Voer in in de terminal:
+   ```bash
+   node server.js
+   ```
+
   
