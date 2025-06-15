@@ -7,7 +7,6 @@ Een Node.js chatbot waarbij je praat met Albert Einstein. De chatbot gebruikt AI
 - Chatten met een gesimuleerde Einstein
 - Gebruikt context uit documenten (vectorsearch met LangChain)
 - Houdt gespreksgeschiedenis bij
-- Kan worden uitgebreid met planeteninfo of datumherkenning
 
 ## 🚀 Installatie
 
